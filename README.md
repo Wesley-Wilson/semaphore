@@ -1,7 +1,7 @@
 <h1 align="center">
   <p>Semaphore </p>
 </h1>
-<h2 align="center"><a href="https://wesley-wilson.github.io/snapclima/" target="_blank">access project</a></h2>
+<h2 align="center"><a href="https://wesley-wilson.github.io/semaphore/" target="_blank">access project</a></h2>
 <h3 align="center">
 <img src="./assets/img/semaphoreGif.gif">
 </h3>
