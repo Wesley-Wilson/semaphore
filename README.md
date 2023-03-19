@@ -29,25 +29,25 @@ Then this function is passed to trafficLight in order to get the event, target a
 <br>
 
 ## Automatic
-adiciona uma função chamada automatic dentro de **turOn**, logo depois a função automatic recebe o método setInterval -> que por sua vez recebe como parâmetro a função changeLight e seu tempo de repetição. 
+adds a function called automatic inside **turOn**, then the automatic function receives the setInterval -> method, which in turn receives the changeLight function and its repetition time as parameters. 
 
-função changeLight 
-é criado um array de cores 
-uma constante color recebendo o array de cores que por sua vez recebe uma variavel que armazena o número 0.
-Indicando assim o index zero do ponto de partida inicial. 
-seu nome é **colorIndex**
-no fim pede a aplicação de **turnOn(color)();**
-Para que as cores possam avançar uma após uma:
-Criada função **nextIndex** ao qual recebe uma condicional composta em ternário -> se colorIndex < 2 então colorIndex recebe mais 1 senão colorIndex é igual a 0
+function changeLight 
+an array of colors is created 
+a constant color receiving the color array which in turn receives a variable storing the number 0.
+Thus indicating the zero index of the initial starting point. 
+its name is **colorIndex**.
+at the end it asks for the application of **turnOn(color)();**
+So that the colors can move forward one after one:
+Created function **nextIndex** to which receives a ternary composite conditional -> if colorIndex < 2 then colorIndex gets 1 more otherwise colorIndex equals 0
 
-Porém temos um último problema a resolver no quesito de incrementação :
+But we have one last incrementation problem to solve :
 
-pois o setInterval é ativado toda vez que o botão automatico é clicado, deixando cada vez mais rápido 
-E por sua vez não para mesmo clicando em outro botão
-precisa armazenar o id de setInterval numa variavel intervalId 
+because the setInterval is activated every time the automatic button is clicked, making it go faster and faster 
+And in turn it doesn't stop even when another button is clicked
+you need to store the setInterval id in an intervalId variable 
 
-Para resolver isso criamos uma função para parar o processo
-**breakAutomatic** que recebe a função **clearInterval** que recebe o parametro intervalId
+To solve this we created a function to stop the process
+**breakAutomatic** which receives the **clearInterval** function which takes the intervalId parameter
 
 ```bash
 automatic: () => intervalId = setInterval(changeLight, 1000)
